@@ -19,26 +19,65 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 <head>
     <title>University of Bahrain Students Enrollment by Nationality</title>
     <link rel="stylesheet" href="https://unpkg.com/picocss/pico.min.css">
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            overflow: auto;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        @media (max-width: 600px) {
-            th, td {
-                display: block;
-                width: 100%;
-            }
-        }
+    <style>  
+        /* additional style + picocss framwork */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0056b3;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e8f4fd;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
     </style>
 </head>
 <body>
